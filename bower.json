@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce",
+  "description": "A thing would like to do",
+  "main": "server.js",
+  "authors": [
+    "Thang Nguyen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/nguyenthang/ecommerce",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/assets/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

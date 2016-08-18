@@ -1,12 +1,16 @@
 /* Server file */
 
 var express = require('express'),
-    app = express();
+    app = express(),
+    config = require('./server/config/configure');
 
+app.use(express.static(__dirname + '/client/'));
 app.set('port', process.env.PORT || 3000);
 
-app.
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/client/index.html');
+});
 
 var server = app.listen(app.get('port'), function(){
-  console.log('The server is running on: ' + app.get('address') + '/' + app.get('port'));
+  console.log('The server is running on: ' + server.address().port);
 });
