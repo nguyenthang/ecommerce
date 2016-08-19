@@ -1,14 +1,23 @@
-var app = angular.module('eapp', []);
+'use strict';
+var app = angular.module('eapp', ['ngRoute']);
 
-app.config('$routeProvider', function($routeProvider){
+app.config(function($routeProvider){
     $routeProvider.when('/', {
+      title: 'Home',
       templateUrl: '/views/home/index.html',
-      controller: 'productCtrl'
-    }).otherwise({
+      controller: 'homeCtrl'
+    }).when('/category', {
+      title: 'Category',
+      templateUrl: '/views/category/categories.html',
+      controller: 'categoryCtrl'
+    })
+    .otherwise({
       redirectTo: '/'
     });
 });
 
-app.controller('showTextCtrl', function($scope){
-  $scope.text = 'Hello World';
+app.run(function($location, $rootScope){
+  $rootScope.$on('$routeChangeSuccess',function(event, current, previous){
+    $rootScope.title = current.$$route.title;
+  });
 });
