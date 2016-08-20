@@ -1,0 +1,27 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="categoryCtrl">
+  <div class="container">
+    <div class="page-header">
+      <div class="row">
+        <div class="col-md-6 text-left" style="padding-bottom: 10px;">
+           <h2><span class="glyphicon glyphicon-plus"></span> {{title}}</h2>
+        </div>
+      </div>
+    </div>
+    <form class="" action="index.html" method="post">
+        <div class="form-group">
+          <label for="categoryName">Category Name: </label>
+          <input type="text" name="name" value="" class="form-control" id="categoryName">
+        </div>
+
+        <div class="form-group">
+          <label for="categoryName">Description: </label>
+          <textarea class="form-control" rows="8"></textarea>
+        </div>
+        <div class="actions">
+          <button type="submit" name="button" class="btn btn-primary">
+            <span class="glyphicon glyphicon-floppy-saved"></span> Save</button>
+          <button type="button" class="btn btn-link">Cancel</button>
+        </div>
+    </form>
+  </div>
+</div>
